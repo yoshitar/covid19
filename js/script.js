@@ -115,7 +115,7 @@ const init = () => {
                 en: "As of "
               };
 
-              let dateTime = tooltipItem[0].xLabel + " " + gData.transition[tooltipItem[0].index][2] + ":00";
+              let dateTime = tooltipItem[0].xLabel;
 
               let suffix = {
                 ja: {
@@ -273,11 +273,11 @@ const init = () => {
                 en: "As of "
               };
 
-              let dateTime = tooltipItem[0].xLabel + " " + gData.transition[tooltipItem[0].index][2] + ":00";
+              let dateTime = tooltipItem[0].xLabel;
 
               let suffix = {
                 ja: {
-                  total: "時点 累計",
+                  total: "時点累計",
                   new: "時点新規"
                 },
                 en: {
@@ -375,7 +375,9 @@ const init = () => {
         config.data.datasets[0].data.push(date[4]);
       }
 
-      let pcrTestColor = (date[0] >= 3 && date[1] >= 4) ? COLORS.dark: COLORS.test;
+      //let pcrTestColor = (date[0] >= 3 && date[1] >= 4) ? COLORS.dark: COLORS.test;
+      let pcrTestColor = COLORS.test;
+
 
       //config.data.datasets[2].backgroundColor.push(pcrTestColor);
       config.data.datasets[1].backgroundColor.push(pcrTestColor);
